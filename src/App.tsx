@@ -3,16 +3,17 @@ import "normalize.css";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 import { ThemeProvider } from "styled-components";
+import { StoreProvider } from "./store";
 
 const history = createBrowserHistory();
 
 const App: React.FC = () => {
   return (
-    <div>
+    <StoreProvider>
       <Router history={history}>
         <ThemeProvider theme={{}}></ThemeProvider>
       </Router>
-    </div>
+    </StoreProvider>
   );
 };
 
