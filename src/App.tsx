@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { StoreProvider } from "./store";
 
 import Api from "api";
+import { Types } from "./models/exercise";
 
 const history = createBrowserHistory();
 const api = new Api();

@@ -10,7 +10,7 @@ export default class Api {
     this.server = new Server();
   }
 
-  getExecises = async () => {
+  getExercises = async () => {
     try {
       return this.server.get(Names.EXERCISES);
     } catch (e) {
@@ -18,7 +18,7 @@ export default class Api {
     }
   };
 
-  getExecise = async (key: IDBValidKey) => {
+  getExercise = async (key: IDBValidKey) => {
     try {
       return this.server.getOne(Names.EXERCISES, key);
     } catch (e) {
@@ -26,17 +26,27 @@ export default class Api {
     }
   };
 
-  setExecises = async (data: Exercise) => {
+  updateExercise = async (newValue: any) => {
+    try {
+      return this.server.put(Names.EXERCISES, newValue);
+    } catch (e) {
+      console.error("update exercise error: ", e);
+    }
+  };
+
+  deleteExercise = async (key: IDBValidKey) => {
+    try {
+      return this.server.delete(Names.EXERCISES, key);
+    } catch (e) {
+      console.log("delete exercise error: ", e);
+    }
+  };
+
+  setExercises = async (data: Exercise) => {
     try {
       this.server.post(Names.EXERCISES, data);
     } catch (e) {}
   };
-
-  // postExercise = async value => {};
-  //
-  // putExercise = async (id, value) => {};
-  //
-  // putUser = async data => {};
 
   getUser = async () => {
     try {

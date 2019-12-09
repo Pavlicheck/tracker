@@ -47,12 +47,25 @@ export default class Request {
       const store = db.transaction(dbName, "readwrite").objectStore(dbName);
       return store
         .add(data)
-        .then(res => res)
-        .catch(e => console.log("e: ", e));
+        .then(resp => resp)
+        .catch(error => console.error("Post error: ", error));
     });
   };
 
-  put = () => {};
+  put = (dbName: Names, value: any) => {
+    return this.openDB(db => {
+      const store = db.transaction(dbName, "readwrite").objectStore(dbName);
+      return store
+        .put(value)
+        .then(resp => resp)
+        .catch(error => console.error("Put error: ", error));
+    });
+  };
 
-  delete = () => {};
+  delete = (dbName: Names, key: IDBValidKey) => {
+    return this.openDB(db => {
+      const store = db.transaction(dbName, "readwrite").objectStore(dbName);
+      return store.delete(key);
+    });
+  };
 }
