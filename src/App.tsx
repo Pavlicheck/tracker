@@ -11,9 +11,6 @@ const history = createBrowserHistory();
 const api = new Api();
 
 const App: React.FC = () => {
-  api.getExecises().then(rep => {
-    console.log("resp: ", rep);
-  });
   return (
     <StoreProvider>
       <Router history={history}>

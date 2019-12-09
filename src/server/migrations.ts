@@ -10,11 +10,13 @@ const migragions = {
       keyPath: "id"
     });
     const exercises = db.createObjectStore(Names.EXERCISES, {
-      keyPath: ["id", "type"]
+      keyPath: "id"
     });
     db.createObjectStore(Names.CURRENT_TRAIN, { keyPath: "id" });
     user.add(initialUser);
+    user.createIndex("id", "id");
     initialExercises.forEach(exercise => exercises.add(exercise));
+    exercises.createIndex("id", "id");
   }
 };
 

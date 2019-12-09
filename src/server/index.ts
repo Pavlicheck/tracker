@@ -1,6 +1,7 @@
 import { openDB, IDBPDatabase, IDBPTransaction, DBSchema } from "idb";
 
 import migrations from "./migrations";
+import { Names } from "../models/db";
 
 export default class Request {
   private name = "tracker-db";
@@ -27,10 +28,31 @@ export default class Request {
     }
   };
 
-  get = (key: string) => {
+  get = (dbname: Names): any => {
     return this.openDB(db => {
-      const store = db.transaction(key).objectStore(key);
+      const store = db.transaction(dbname).objectStore(dbname);
       return store.getAll();
     });
   };
+
+  getOne = (dbname: Names, key: IDBValidKey): any => {
+    return this.openDB(db => {
+      const store = db.transaction(dbname).objectStore(dbname);
+      return store.get(key);
+    });
+  };
+
+  post = (dbName: Names, data: any) => {
+    return this.openDB(db => {
+      const store = db.transaction(dbName, "readwrite").objectStore(dbName);
+      return store
+        .add(data)
+        .then(res => res)
+        .catch(e => console.log("e: ", e));
+    });
+  };
+
+  put = () => {};
+
+  delete = () => {};
 }
