@@ -6,12 +6,12 @@ import { ThemeProvider } from "styled-components";
 import { StoreProvider } from "./store";
 
 import Api from "api";
-import { Types } from "./models/exercise";
 
 const history = createBrowserHistory();
 const api = new Api();
 
-const App: React.FC = () => {
+const App: React.FC = props => {
+  console.log("props: ", props);
   return (
     <StoreProvider>
       <Router history={history}>
