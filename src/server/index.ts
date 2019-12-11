@@ -28,10 +28,22 @@ export default class Request {
     }
   };
 
-  get = (dbname: Names): any => {
+  getAll = (dbname: Names): any => {
     return this.openDB(db => {
       const store = db.transaction(dbname).objectStore(dbname);
       return store.getAll();
+    });
+  };
+
+  getAllByIndex = (dbname: Names, indexName: string, key: IDBValidKey) => {
+    return this.openDB(db => {
+      return db.getAllFromIndex(dbname, indexName, key);
+    });
+  };
+
+  getOneByIndex = (dbname: Names, indexName: string, key: IDBValidKey) => {
+    return this.openDB(db => {
+      return db.getFromIndex(dbname, indexName, key);
     });
   };
 

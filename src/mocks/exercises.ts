@@ -14,6 +14,20 @@ const exercises: Exercise[] = [
     type: Types.REPS,
     muscles: ["Ноги"],
     description: ""
+  },
+  {
+    id: "3",
+    name: "Присед",
+    type: Types.TIME,
+    muscles: ["Ноги"],
+    description: ""
+  },
+  {
+    id: "4",
+    name: "Присед",
+    type: Types.TIME,
+    muscles: ["Ноги"],
+    description: ""
   }
 ];
 
