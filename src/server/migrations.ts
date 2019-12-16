@@ -17,6 +17,7 @@ const migragions = {
     user.createIndex("id", "id");
     initialExercises.forEach(exercise => exercises.add(exercise));
     exercises.createIndex("id", "id");
+    exercises.createIndex("type", "type");
   }
 };
 
