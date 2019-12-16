@@ -7,6 +7,7 @@ import { StoreProvider } from "./store";
 
 import Api from "api";
 import { Types } from "./models/exercise";
+import { Page } from "components";
 
 const history = createBrowserHistory();
 const api = new Api();
@@ -15,7 +16,9 @@ const App: React.FC = () => {
   return (
     <StoreProvider>
       <Router history={history}>
-        <ThemeProvider theme={{}}></ThemeProvider>
+        <ThemeProvider theme={{}}>
+          <Page />
+        </ThemeProvider>
       </Router>
     </StoreProvider>
   );
