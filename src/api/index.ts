@@ -4,11 +4,9 @@ import { Exercise } from "../models/exercise";
 
 const server = new Server();
 
-export default class Api {
-  private server: Server;
-  constructor() {
-    this.server = new Server();
-  }
+class Api {
+  private server = new Server();
+  constructor() {}
 
   getAllExercises = async () => {
     try {
@@ -73,3 +71,5 @@ export default class Api {
     }
   };
 }
+
+export const api = new Api();
