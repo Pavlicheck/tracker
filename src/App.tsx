@@ -5,12 +5,9 @@ import { createBrowserHistory } from "history";
 import { ThemeProvider } from "styled-components";
 import { StoreProvider } from "./store";
 
-import Api from "api";
-import { Types } from "./models/exercise";
 import { Page } from "components";
 
 const history = createBrowserHistory();
-const api = new Api();
 
 const App: React.FC = () => {
   return (
