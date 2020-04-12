@@ -7,6 +7,10 @@ export const Routes: Array<RouteProps> = [
     component: Pages.ExerciseCreator
   },
   {
+    path: "/timer",
+    component: Pages.Timer
+  },
+  {
     path: "/loading",
     exact: true,
     component: Pages.Loading
