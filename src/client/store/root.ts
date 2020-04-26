@@ -1,16 +1,16 @@
 import { CreateExercise } from "./create-exercise";
 import { observable } from "mobx";
-// import { UI } from "uikit";
+import { UI } from "uikit";
 
 interface RootStore {
   createExercise: CreateExercise;
-  // ui: UI;
+  ui: UI;
 }
 
 class RootStore {
   constructor() {
     this.createExercise = new CreateExercise();
-    // this.ui = new UI();
+    this.ui = new UI();
   }
 }
 

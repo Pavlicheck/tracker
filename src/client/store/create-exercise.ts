@@ -1,7 +1,7 @@
 import { action, observable } from "mobx";
 import unicid from "uniqid";
 
-import { Types as ExerciseType, Exercise } from "models/exercise";
+import { Types as ExerciseType, Exercise } from "client/models/exercise";
 import { api } from "../api";
 
 export class CreateExercise {

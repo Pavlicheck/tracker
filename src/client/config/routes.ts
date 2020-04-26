@@ -1,5 +1,5 @@
 import { RouteProps } from "react-router";
-import * as Pages from "pages";
+import * as Pages from "client/pages";
 
 export const Routes: Array<RouteProps> = [
   {

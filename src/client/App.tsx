@@ -4,7 +4,7 @@ import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 import { StoreProvider } from "./store";
 
-import { Page } from "components";
+import { Page } from "client/components";
 
 const history = createBrowserHistory();
 
