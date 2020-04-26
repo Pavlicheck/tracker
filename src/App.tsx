@@ -2,8 +2,8 @@ import React from "react";
 import "normalize.css";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
-import { ThemeProvider } from "styled-components";
 import { StoreProvider } from "./store";
+import { ThemeProvider } from "@material-ui/core";
 
 import { Page } from "components";
 
