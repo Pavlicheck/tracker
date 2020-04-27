@@ -5,17 +5,18 @@ import { createBrowserHistory } from "history";
 import { StoreProvider } from "./store";
 
 import { Page } from "client/components";
-import { PrimaryButton } from "uikit";
+import { ThemeProvider } from "./components/theme-provider/theme-provider";
 
 const history = createBrowserHistory();
 
 const App: React.FC = () => {
   return (
     <StoreProvider>
-      <Router history={history}>
-        <PrimaryButton>Button</PrimaryButton>
-        <Page />
-      </Router>
+      <ThemeProvider>
+        <Router history={history}>
+          <Page />
+        </Router>
+      </ThemeProvider>
     </StoreProvider>
   );
 };

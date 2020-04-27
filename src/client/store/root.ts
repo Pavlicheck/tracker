@@ -1,5 +1,4 @@
 import { CreateExercise } from "./create-exercise";
-import { observable } from "mobx";
 import { UI } from "uikit";
 
 interface RootStore {
