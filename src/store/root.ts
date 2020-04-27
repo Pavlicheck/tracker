@@ -1,13 +1,15 @@
 import { CreateExercise } from "./create-exercise";
-import { observable } from "mobx";
+import { TimerStore } from "./timer";
 
 interface RootStore {
   createExercise: CreateExercise;
+  timer: TimerStore;
 }
 
 class RootStore {
   constructor() {
     this.createExercise = new CreateExercise();
+    this.timer = new TimerStore();
   }
 }
 
