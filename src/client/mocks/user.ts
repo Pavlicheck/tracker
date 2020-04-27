@@ -1,4 +1,4 @@
-import { Theme, User } from "models/user";
+import { Theme, User } from "client/models/user";
 
 const user: User = {
   id: "1",

@@ -1,7 +1,7 @@
 import { openDB, IDBPDatabase, IDBPTransaction, DBSchema } from "idb";
 
 import migrations from "./migrations";
-import { Names } from "../models/db";
+import { Names } from "../client/models/db";
 
 export default class Request {
   private name = "tracker-db";

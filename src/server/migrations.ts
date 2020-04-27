@@ -1,7 +1,7 @@
 import { IDBPDatabase, IDBPTransaction } from "idb";
-import { Names } from "../models/db";
-import initialUser from "mocks/user";
-import initialExercises from "mocks/exercises";
+import { Names } from "../client/models/db";
+import initialUser from "client/mocks/user";
+import initialExercises from "client/mocks/exercises";
 
 const migragions = {
   0: (db: IDBPDatabase) => {

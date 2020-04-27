@@ -1,8 +1,8 @@
 import { TaskTimer } from "tasktimer";
 import unicid from "uniqid";
 import { observable } from "mobx";
-import { CreateTimerProps } from "models/timer";
-import { createIntervalTrain } from "utils/createIntervalTrain";
+import { CreateTimerProps } from "client/models/timer";
+import { createIntervalTrain } from "client/utils/createIntervalTrain";
 
 // type TimerType = {
 //   timer:

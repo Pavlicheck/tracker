@@ -2,21 +2,21 @@ import React from "react";
 import "normalize.css";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
-import { ThemeProvider } from "styled-components";
 import { StoreProvider } from "./store";
 
-import { Page } from "components";
+import { Page } from "client/components";
+import { ThemeProvider } from "./components/theme-provider/theme-provider";
 
 const history = createBrowserHistory();
 
 const App: React.FC = () => {
   return (
     <StoreProvider>
-      <Router history={history}>
-        <ThemeProvider theme={{}}>
+      <ThemeProvider>
+        <Router history={history}>
           <Page />
-        </ThemeProvider>
-      </Router>
+        </Router>
+      </ThemeProvider>
     </StoreProvider>
   );
 };

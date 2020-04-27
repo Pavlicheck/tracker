@@ -1,4 +1,4 @@
-import { Exercise, Types } from "models/exercise";
+import { Exercise, Types } from "client/models/exercise";
 
 const exercises: Exercise[] = [
   {
