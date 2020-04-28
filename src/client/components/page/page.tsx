@@ -1,13 +1,14 @@
 import React, { ReactNode } from "react";
+import { Container } from "uikit";
 
 import { PageContent } from "./page-content";
-import { Routes } from "client/config/routes";
+import { Routes } from "../../config/routes";
 
 export const Page = ({ children }: { children?: ReactNode }) => {
   return (
-    <div>
+    <Container>
       <PageContent routes={Routes} />
       {children}
-    </div>
+    </Container>
   );
 };
