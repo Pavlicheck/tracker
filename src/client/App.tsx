@@ -3,7 +3,7 @@ import "normalize.css";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 import { StoreProvider } from "./store";
-import { Header } from "uikit";
+import { Footer, Header } from "uikit";
 
 import { Page } from "./components/page/page";
 import { ThemeProvider } from "./components/theme-provider/theme-provider";
@@ -17,7 +17,7 @@ const App: React.FC = () => {
         <Router history={history}>
           <Header />
           <Page />
-          {/*<Footer />*/}
+          <Footer />
         </Router>
       </ThemeProvider>
     </StoreProvider>
